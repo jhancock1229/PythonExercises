@@ -12,3 +12,4 @@ print "%s gallons of gasoline produces %s barrels of oil" % (user_input, oil_bar
 print "%s gallons of gasoline produces %s pounds of CO2" % (user_input, lbs_COO)
 print "%s gallons of gasoline is energy equivalent to %s gallons of ethanol" % (user_input, ethanol_gallon)
 print "%s gallons of gasoline requires %s US dollars" % (user_input, cost)
+print "Thanks for playing"
