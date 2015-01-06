@@ -1,4 +1,7 @@
+# Initial user input code
 user_input = raw_input("Please enter a speed in miles/hour: ")
+
+
 # Below, conversion values are assigned to variables
 meters_per_mile = 1609.34
 feet_per_mile = 5280
@@ -13,11 +16,17 @@ speed_of_sound_feet_per_second = 1130
 speed_of_light_meters_per_second = 299792458
 seconds_per_hour = 3600
 convert_to_percent = 100
+
+
 # Below, variables are combined to produce results for the assignment
 barleycorn_per_day = (meters_per_mile * barleycorn_per_meter) / hours_in_day
-furlongs_per_fortnight = (meters_per_mile * yards_per_meter * furlong_to_yards) / (hours_in_day * days_in_week * weeks_in_fortnight)
+furlongs_per_fortnight = (meters_per_mile * yards_per_meter * furlong_to_yards) \
+                         / (hours_in_day * days_in_week * weeks_in_fortnight)
 mach_number = (speed_of_sound_feet_per_second * feet_per_mile) / seconds_per_hour
 percent_speed_of_light = ((meters_per_mile / seconds_per_hour) / speed_of_light_meters_per_second) * convert_to_percent
+
+
+# Execution of program
 print "Original speed in mph is: %s" % user_input
 print "Converted to barleycorn/day is: %s" % barleycorn_per_day
 print "Converted to furlongs/fortnight is: %s" % furlongs_per_fortnight

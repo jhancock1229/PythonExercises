@@ -1,4 +1,8 @@
+# Initial user input
 user_input = int(raw_input("Please enter the number of gallons of gasoline: "))
+
+
+# Variables which convert user_input into unit conversions
 liters = user_input * 3.7854
 gas_barrel = user_input / 42
 oil_barrel = gas_barrel / 19.5
@@ -6,6 +10,9 @@ lbs_COO = user_input * 20
 BTU = user_input * 115000
 cost = user_input * 4
 ethanol_gallon = user_input * (115000 / 75700)
+
+
+# Execution of program
 print "Original number of gallons is: %s" % (user_input)
 print "%s gallons of gasoline requires %s liters" % (user_input, liters)
 print "%s gallons of gasoline produces %s barrels of oil" % (user_input, oil_barrel)
