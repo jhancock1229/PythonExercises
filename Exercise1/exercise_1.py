@@ -13,7 +13,7 @@ def remainder(x, y):
         return "You cannot divide by zero!"
     else:
         return first_int % second_int
-print "The sum of", first_int, "and", second_int, "is: ", add
-print "The difference of", first_int, "and", second_int, "is: ", subtract
-print "The product of", first_int, "and", second_int, "is: ", multiply
-print "The quotient of", first_int, "and", second_int, "is: ", division(first_int, second_int), "with remainder: ", remainder(first_int, second_int)
+print "The sum of %s and %s is: %s" % (first_int, second_int, add)
+print "The difference of %s and %s is: %s" % (first_int, second_int, subtract)
+print "The product of %s and %s is: %s" % (first_int, second_int, multiply)
+print "The quotient of %s and %s is: %s" % (first_int, second_int, division(first_int, second_int)), "with remainder: %s" % (remainder(first_int, second_int))
