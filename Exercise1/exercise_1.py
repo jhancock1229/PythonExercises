@@ -1,28 +1,24 @@
-# Conditions for first user input: the input has to be a number
-first_int = raw_input("Please enter the first integer: ")
-while not first_int.isdigit():
-    first_int = raw_input("That is not an integer, please enter an integer: ")
 
+def get_user_input(count):
+    user_input = raw_input("Please enter the " + count + " integer: ")
 
-# Conditions for second user input: the input has to be a number and cannot be 0
-second_int = raw_input("Please enter the second integer: ")
-while not second_int.isdigit() or second_int == "0":
-    if second_int == "0":
-        second_int = (raw_input("You cannot divide by zero! Pick a different value: "))
+    if not user_input.isdigit() or (user_input == "0" and count == "second"):
+        print "Not correct. Please try again."
+        return get_user_input(count)
     else:
-        second_int = (raw_input("That is not an integer, please enter an integer: "))
+        return int(user_input)
+
+value_1 = get_user_input("first")
+value_2 = get_user_input("second")
+
+add = value_1 + value_2
+subtract = value_1 - value_2
+multiply = value_1 * value_2
+division = value_1 / value_2
+remainder = value_1 % value_2
 
 
-# Variables in which user string input is converted into integers for performing math operations
-add = int(first_int) + int(second_int)
-subtract = int(first_int) - int(second_int)
-multiply = int(first_int) * int(second_int)
-division = int(first_int) / int(second_int)
-remainder = int(first_int) % int(second_int)
-
-
-# Execution of the program
-print "The sum of %s and %s is: %s" % (first_int, second_int, add)
-print "The difference of %s and %s is: %s" % (first_int, second_int, subtract)
-print "The product of %s and %s is: %s" % (first_int, second_int, multiply)
-print "The quotient of %s and %s is: %s with remainder: %s" % (first_int, second_int, division, remainder)
+print "The sum of %s and %s is %s" % (value_1, value_2, add)
+print "The difference of %s and %s is %s" % (value_1, value_2, subtract)
+print "The product of %s and %s is %s" % (value_1, value_2, multiply)
+print "The quotient of %s and %s is %s with a remainder of %s" % (value_1, value_2, division, remainder)
