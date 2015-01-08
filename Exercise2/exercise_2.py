@@ -14,10 +14,10 @@ user_gallon = int(user_input)
 # Variables which convert user_input into unit conversions
 liters = user_gallon * 3.7854
 oil_barrel = user_gallon / 19.5
-lbs_COO = user_gallon * 20
-BTU = user_gallon * 115000
-cost = user_gallon * 4
-gas_to_ethanol_ratio = float(115000) / float(75700)
+lbs_COO = user_gallon * 20.0
+BTU = user_gallon * 115000.0
+cost = user_gallon * 4.0
+gas_to_ethanol_ratio = 115000.0 / 75700.0
 ethanol_gallon = user_gallon * gas_to_ethanol_ratio
 
 
