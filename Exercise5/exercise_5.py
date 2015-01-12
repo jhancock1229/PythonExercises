@@ -2,7 +2,7 @@ import string
 from random import randint
 from random import choice
 
-file_name = 'pg10.txt'
+file_name = 'project_5.dat'
 
 
 def random_string_generator(file_name):
@@ -25,9 +25,6 @@ def counter(file_name):
             else:
                 dictionary[character] = 1
     return dictionary
-
-
-
 
 
 random_string_generator(file_name)
