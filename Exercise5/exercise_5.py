@@ -1,28 +1,39 @@
 import string
-from random import choice
 from random import randint
+from random import choice
 
-def random_string():
-    random_integer = randint(0, 101)
-    s = ''
+file_name = 'pg10.txt'
 
-    # print random_integer
 
+def random_string_generator(file_name):
+    random_integer = randint(1, 11)
+    s = ""
     for i in range(0, random_integer):
-        my_char = choice(string.letters)
-        s += my_char
-
-    print s
-random_string()
-
-# d = dict()
-#
-# for c in a_string:
-#     d[c] = d.get(c,0) + 1
-# print d
+        x = choice(string.letters)
+        s += x
+    with open(file_name, 'a+') as f:
+        f.write(s)
 
 
-# if i in my_dict:
-#         my_dict[i] += 1
-#     else:
-#         my_dict[i] = 1
+def counter(file_name):
+    with open(file_name, 'r') as f:
+        contents = f.read()
+        dictionary = {}
+        for character in contents:
+            if character in dictionary:
+                dictionary[character] += 1
+            else:
+                dictionary[character] = 1
+    return dictionary
+
+
+
+
+
+random_string_generator(file_name)
+counter(file_name)
+
+print counter(file_name)
+
+
+
