@@ -10,8 +10,10 @@ def function_two(file_name):
     else:
         print "Written content in the file successfully!"
 
-
-print function_two('list.txt')
+try:
+    print function_one('list.txt')
+except IOError:
+    print function_two('list.txt')
 
 
 
