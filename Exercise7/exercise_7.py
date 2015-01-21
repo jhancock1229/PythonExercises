@@ -12,8 +12,14 @@ city_temp = {
 
 
 def value_list(city_temp):
-    new_list = city_temp.items()
-    return new_list
+    new_list = []
+    for c in city_temp:
+        new_list.append([c, [city_temp[c].split()]])
+    print new_list
+    for i in new_list:
+        if i[-1][-1][-1] == 'F':
+
+
 
 
 def convert_to_integer(new_list):
@@ -31,10 +37,10 @@ def unit_convert(new_list, temp_as_int):
 a = value_list(city_temp)
 print a
 
-# def assignment():
-#     for temp in city_temp.values():
-#         c = unit_convert(temp)
-#         return c
+def assignment():
+    for temp in city_temp.values():
+        c = unit_convert(temp)
+        return c
 
 
 
